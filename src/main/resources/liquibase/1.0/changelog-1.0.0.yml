@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-tours-table
+      author: Qurban Heydarov
+      changes:
+        - createTable:
+            tableName: Tours
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: tourname
+                  type: varchar(32)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: where
+                  type: varchar(32)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: decimal(6,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: about
+                  type: varchar(300)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: image
+                  type: varchar(32)
+                  constraints:
+                    nullable: false

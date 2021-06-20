@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-users-table
+      author: Qurban Heydarov
+      changes:
+        - createTable:
+            tableName: Users
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: login
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(40)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(40)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(40)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(40  )
+                  constraints:
+                    nullable: false
